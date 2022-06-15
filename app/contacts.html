@@ -55,14 +55,14 @@
       <section class="top">
         <div class="top__container" style="background-image: url('img/top_bg.png')">
           <div class="container">
-            <h2 class="top__title title">LOG IN</h2>
+            <h2 class="top__title title">CONTACT US</h2>
             <div class="breadcrumbs">
               <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
                   <a class="breadcrumbs__link" href="#"> Home </a>
                 </li>
                 <li class="breadcrumbs__item">
-                  <a class="breadcrumbs__link" href="#"> Log in </a>
+                  <a class="breadcrumbs__link" href="#"> Contact</a>
                 </li>
               </ul>
             </div>
@@ -279,6 +279,250 @@
         </div>
       </div>
     </footer>
+    <!-- внутри адреса после знака равно прописывается наш API_KEY -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+
+    <script>
+      let map;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: { lat: 40.75974670507961, lng: -73.98966087351181 },
+          zoom: 11,
+          styles: [
+            {
+              featureType: 'all',
+              elementType: 'geometry.stroke',
+              stylers: [
+                {
+                  visibility: 'simplified',
+                },
+              ],
+            },
+            {
+              featureType: 'administrative',
+              elementType: 'all',
+              stylers: [
+                {
+                  visibility: 'off',
+                },
+              ],
+            },
+            {
+              featureType: 'administrative',
+              elementType: 'labels',
+              stylers: [
+                {
+                  visibility: 'simplified',
+                },
+                {
+                  color: '#a31645',
+                },
+              ],
+            },
+            {
+              featureType: 'landscape',
+              elementType: 'all',
+              stylers: [
+                {
+                  weight: '3.79',
+                },
+                {
+                  visibility: 'on',
+                },
+                {
+                  color: '#ffecf0',
+                },
+              ],
+            },
+            {
+              featureType: 'landscape',
+              elementType: 'geometry',
+              stylers: [
+                {
+                  visibility: 'on',
+                },
+              ],
+            },
+            {
+              featureType: 'landscape',
+              elementType: 'geometry.stroke',
+              stylers: [
+                {
+                  visibility: 'on',
+                },
+              ],
+            },
+            {
+              featureType: 'poi',
+              elementType: 'all',
+              stylers: [
+                {
+                  visibility: 'simplified',
+                },
+                {
+                  color: '#a31645',
+                },
+              ],
+            },
+            {
+              featureType: 'poi',
+              elementType: 'geometry',
+              stylers: [
+                {
+                  saturation: '0',
+                },
+                {
+                  lightness: '0',
+                },
+                {
+                  visibility: 'off',
+                },
+              ],
+            },
+            {
+              featureType: 'poi',
+              elementType: 'geometry.stroke',
+              stylers: [
+                {
+                  visibility: 'off',
+                },
+              ],
+            },
+            {
+              featureType: 'poi.business',
+              elementType: 'all',
+              stylers: [
+                {
+                  visibility: 'simplified',
+                },
+                {
+                  color: '#d89ca8',
+                },
+              ],
+            },
+            {
+              featureType: 'poi.business',
+              elementType: 'geometry',
+              stylers: [
+                {
+                  visibility: 'on',
+                },
+              ],
+            },
+            {
+              featureType: 'poi.business',
+              elementType: 'geometry.fill',
+              stylers: [
+                {
+                  visibility: 'on',
+                },
+                {
+                  saturation: '0',
+                },
+              ],
+            },
+            {
+              featureType: 'poi.business',
+              elementType: 'labels',
+              stylers: [
+                {
+                  color: '#a31645',
+                },
+              ],
+            },
+            {
+              featureType: 'poi.business',
+              elementType: 'labels.icon',
+              stylers: [
+                {
+                  visibility: 'simplified',
+                },
+                {
+                  lightness: '84',
+                },
+              ],
+            },
+            {
+              featureType: 'road',
+              elementType: 'all',
+              stylers: [
+                {
+                  saturation: -100,
+                },
+                {
+                  lightness: 45,
+                },
+              ],
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'all',
+              stylers: [
+                {
+                  visibility: 'simplified',
+                },
+              ],
+            },
+            {
+              featureType: 'road.arterial',
+              elementType: 'labels.icon',
+              stylers: [
+                {
+                  visibility: 'off',
+                },
+              ],
+            },
+            {
+              featureType: 'transit',
+              elementType: 'all',
+              stylers: [
+                {
+                  visibility: 'off',
+                },
+              ],
+            },
+            {
+              featureType: 'water',
+              elementType: 'all',
+              stylers: [
+                {
+                  color: '#d89ca8',
+                },
+                {
+                  visibility: 'on',
+                },
+              ],
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry.fill',
+              stylers: [
+                {
+                  visibility: 'on',
+                },
+                {
+                  color: '#fedce3',
+                },
+              ],
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels',
+              stylers: [
+                {
+                  visibility: 'off',
+                },
+              ],
+            },
+          ],
+        });
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.js"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>
